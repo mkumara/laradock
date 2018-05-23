@@ -1,0 +1,1 @@
+docker-compose up nginx mysql php-fpm elasticsearch redis workspace
