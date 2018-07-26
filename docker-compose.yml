@@ -532,6 +532,7 @@ services:
       environment:
         - cluster.name=laradock-cluster
         - bootstrap.memory_lock=true
+        - xpack.security.enabled=false
         - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
       ulimits:
         memlock:
