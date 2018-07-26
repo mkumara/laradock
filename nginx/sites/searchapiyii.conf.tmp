@@ -4,8 +4,8 @@ server {
 
     listen 80; ## listen for ipv4
 
-    server_name lab-docker.givelify.com;
-    root   /var/www/search-engine-yii/web;
+    server_name searchapiyii.test;
+    root   /var/www/SearchAPIYii/web;
     index  index.php;
 
     access_log /var/log/nginx/searchapiyii.test.access.log;

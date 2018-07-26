@@ -2,8 +2,8 @@ server {
 
     listen 80;
 
-    server_name searchapi.test;
-    root /var/www/SearchAPI/public;
+    server_name lab-docker.givelify.com;
+    root /var/www/search_engine/public;
     index index.php index.html index.htm;
 
     location / {

@@ -59,7 +59,7 @@ services:
         - applications
       extra_hosts:
         - "dockerhost:${DOCKER_HOST_IP}"
-        - "searchapi.test:${DOCKER_HOST_IP}"
+        - "lab-docker.givelify.com:${DOCKER_HOST_IP}"
       ports:
         - "${WORKSPACE_SSH_PORT}:22"
         - "${RACHET_PORT}:10000"
@@ -110,7 +110,7 @@ services:
         - workspace
       extra_hosts:
         - "dockerhost:${DOCKER_HOST_IP}"
-        - "searchapi.test:${DOCKER_HOST_IP}"
+        - "lab-docker.givelify.com:${DOCKER_HOST_IP}"
       environment:
         - PHP_IDE_CONFIG=${PHP_IDE_CONFIG}
       networks:
@@ -240,6 +240,7 @@ services:
       volumes:
         - ${DATA_SAVE_PATH}/mysql:/var/lib/mysql
         - ${MYSQL_ENTRYPOINT_INITDB}:/docker-entrypoint-initdb.d
+        - ${MYSQL_WORKINGDATA_PATH}:/root/data
       ports:
         - "${MYSQL_PORT}:3306"
       networks:
@@ -523,6 +524,9 @@ services:
         memlock:
           soft: -1
           hard: -1
+        nofile:
+          soft: 65536
+          hard: 65536
       mem_limit: 1024m
       ports:
         - "${ELASTICSEARCH_HOST_HTTP_PORT}:9200"
