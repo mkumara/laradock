@@ -10,7 +10,7 @@ You may need to start the web-socket server manually if it fails to start automa
 
 ```
 docker-compose exec workspace bash
-cd search_engine_yii
+cd search-engine-yii
 php yii web-socket
 ```
 
