@@ -6,6 +6,15 @@ cp env-example .env
 ./up
 
 
+You may need to start the web-socket server manually if it fails to start automatically
+
+```
+docker-compose exec workspace bash
+cd search_engine_yii
+php yii web-socket
+```
+
+
 Note:
 
 There may be port conflicts.

@@ -827,3 +827,5 @@ RUN apt-get clean && \
 
 # Set default work directory
 WORKDIR /var/www
+
+CMD php /var/www/search-engine-yii/yii web-socket
