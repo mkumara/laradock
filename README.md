@@ -14,7 +14,7 @@ Change the port forwardings in .env file
 
 
 
-One example setup with different fort forwarding
+One example setup with different port forwarding
 
 ```###########################################################
 ###################### General Setup ######################
